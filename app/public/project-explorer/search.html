@@ -1,49 +1,73 @@
-<html>
+<htm>
+  <Link rel = "stylesheet"  href='css/bootstrap.min.css'>
+    
+    <body>
     <header>
-        <Link rel = "stylesheet"  href='css/bootstrap.min.css'>
-        <h1>Project explorer</h1>
-        <h2>Onestop database for project explorer</h2>
+<nav class="navbar navbar-expand navbar-dark bg-primary" > 
+  <a class="navbar-brand" href="project.html">Project explorer</a>
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search projects" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+        
+    <div class="navbar-nav mr-auto">
+      <a class="nav-link" href="submit.html">submit</a>
+  </div>
+  <div class="navbar-nav" >
+    <a class="nav-link" href="signup.html">SignUp</a>
+    <a class="nav-link" href="login.html">Login</a>
+    </div>
+  </div>
+</nav>
     </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="search.html">Projects</a>
-        <a href="login.html">Login</a>
-        <a href="register.html">Register</a>
-    </nav>
-    <main>
-        <section>
-            <header>
-                <h3>Search Project By</h3>
-                  </header>
-                  <form name="searchForm">
-                <input type="text" Name="searchTerm" placeholder="Project Name,Authors,Astract,Tags"/></input><br><br>
-                <label for="searchBy">Search By</label><br>
-                <select type="Name" name="searchType"><option value="Name">Name</option><option value="Authors">Authors</option><option value="Abstract">Abstract</option><option value="Tags">Tags</option</select><br><br>
-                <input type="submit" value="Search"/></input>
-                </form>
+  
+                     
+                      <h3>Project Gallery</h3>
+                      <div class="p-3 mb-2 bg-light text-dark">
+                        <form>
+                            <div class="form-row">
+                              <div class=" col">
+                                <input type="text" class="form-control form-control-1g" placeholder="search project name,author, tags">
+                            </div>
+                            <div class="col">
+                                <label for="search">Search by</label>
+                                <select id="search" class="form-control form-control-sm">
+                                  <option selected>Name</option>
+                                  <option>...</option>
+                                </select>
+                              </div>
+                            
+                            <button type="button" class="btn btn-primary">Submit</button>
+                            </div> 
+                      </form>
+                    
+                      <h4>All projects(0 results)</h4>
+                      <div class="d-flex flex-row">
 
-        </section>
-        <section>
-            <h2>Search Result</h2>
-            <h3>Project 1</h3>
-                <ul>
-            <li>Name:Project1 <br></li>
-                </ul>
-               <ul>
-                    <li>Description: This is project One<br></li>
-                </ul>
-                <ul>
-                    <li>Proram: Computer Science<br></li>
-                </ul>
-               <ul>
-                    <li>Authors: John Doe, Jane Doe<br></li> 
-               </ul>
-               <ul>
-                <li>Tags:#Asphyxia #GSW<br></li>
-               </ul>
-               <ul>
-                <li>Year:2018</li>
-                </ul>
-              </section>
-    </main>
+                        <div class="card" style="width: 18rem;">
+                          <div class="card-body">
+                            <h5 class="card-title">Project Title</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Author1, Author2</h6>
+                       <p class="card-text">Some quick example text to build on the card title and make up the
+                          bulk of the card's content.</p>
+                          <a href="#" class="card-link">#html</a>
+                          <a href="#" class="card-link">#css</a>
+                        <a href="#" class="card-link">#javascript</a></div>
+                      </div> 
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Project Title</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Author1, Author2</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the
+                bulk of the card's content.</p>
+                <a href="#" class="card-link">#html</a>
+                <a href="#" class="card-link">#css</a>
+              <a href="#" class="card-link">#javascript</a></div>
+                              </div>
+                      </div>
+                              <footer class= "float-right">
+                                <span>Project explorer &copy;2021.Edconnet</span>
+                               
+                             </footer>
+                      </body>             
 </html>

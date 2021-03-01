@@ -1,46 +1,42 @@
 <html>
-    <header>
-        <Link rel = "stylesheet"  href='css/bootstrap.min.css'>
-        <h1>Project explorer</h1>
-        <h2>Onestop database for project explorer</h2>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="search.html">Projects</a>
-        <a href="login.html">Login</a>
-        <a href="register.html">Register</a>
-    </nav>
-    <main>
-        <section>
+    <Link rel = "stylesheet"  href='css/bootstrap.min.css'>
+    
+        <body>
         <header>
-           
-            <h3>Project 1</h3>
-        </header>
-        <ul>
-        <li>Created by:Jane Doe</li>
-        </ul>
-        <ul>
-        <li>Date created by: 00/00/0000</li>
-        </ul>
-        <ul>
-        <li>Late updated:01/01/0001</li>
-        </ul>
-        </section><br><br>
-        <section>
-            <h2>Edit Project</h2>
-            <form>
-            <label for="projectName">Project Name:</label><br>
-            <input type="text" name="name"/><br><br>
-            <label for="projectAbstract">Project Abstract :</label><br>
-            <textarea id="text" name="abstract"></textarea><br><br>
-            <label for="authors">Authors:</label><br>
-            <input type="text" name="authors"/><br><br>
-            <label for="tags">Tag(s):</label><br>
-            <input type="text" name="tags"/><br><br>
-            <label for="uploadFile">Upload File:</label><br>
-            <input type="file" name="projectFile"><select value="Choose file">Choose File</select>No file option<br><br>
-            <input type="submit"/>
+    <nav class="navbar navbar-expand navbar-dark bg-primary" > 
+      <a class="navbar-brand" href="project.html">Project explorer</a>
+            <form class="form-inline">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search projects" aria-label="Search">
+              <button class="btn btn-outline-light" type="submit">Search</button>
             </form>
-        </section>
-    </main>
+            
+        <div class="navbar-nav mr-auto">
+          <a class="nav-link" href="submit.html">submit</a>
+      </div>
+      <div class="navbar-nav" >
+        <a class="nav-link" href="signup.html">SignUp</a>
+        <a class="nav-link" href="login.html">Login</a>
+        </div>
+      </div>
+    </nav>
+        </header>
+        <form>
+            <div class="mx-auto w-75 p-3">
+            <div class="container-fluid">
+                <h3>Project 1</h3>
+                <div class="form-row">
+                  <div class="form-group col">
+                    <input type="text" class="form-control" placeholder="Created by Ade Chris">
+                  </div>
+                  <div class="form-group col">
+                  <input type="text" class="form-control" placeholder="Created 01/03/2021">
+                 </div>
+                 <div class="form-group col">
+                    <input type="text" class="form-control" placeholder="Last updated">
+                   </div> 
+                   <button type="button" class="btn btn-primary">View Project</button>
+            </div>
+            </div>
+        </form>
+       
 </html>

@@ -1,30 +1,56 @@
 <html>
-    <header>
-        
-    <Link rel = "stylesheet"  href='css/bootstrap.min.css'> 
-        <h1>Project explorer</h1>
-        <h2>Onestop database for project explorer</h2>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="search.html">Projects</a>
-        <a href="login.html">Login</a>
-        <a href="register.html">Register</a>
-    </nav>
-    <main>
+    <Link rel = "stylesheet"  href='css/bootstrap.min.css'>
+    
+        <body>
         <header>
-            <h2>Submit Project</h2>
+    <nav class="navbar navbar-expand navbar-dark bg-primary" > 
+      <a class="navbar-brand" href="project.html">Project explorer</a>
+            <form class="form-inline">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search projects" aria-label="Search">
+              <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+            
+        <div class="navbar-nav mr-auto">
+          <a class="nav-link" href="submit.html">submit</a>
+      </div>
+      <div class="navbar-nav" >
+        <a class="nav-link" href="signup.html">SignUp</a>
+        <a class="nav-link" href="login.html">Login</a>
+        </div>
+      </div>
+    </nav>
         </header>
         <form>
-        <label for="projectName">Project Name:</label><br>
-        <input type="text" name="name"/><br><br>
-        <label for="projectAbstract">Project Abstract:</label><br>
-        <textarea id="text" name="abstract"></textarea><br><br>
-        <label for="authors">Authors:</label><br>
-        <input type="text" name="authors"/><br><br>
-        <label for="tags">Tag(s):</label><br>
-        <input type="text" name="tags"/><br><br>
-        <input type="submit"/>
-        </form>
-         </main>
+        <div class="mx-auto w-50 p-3" style="width:200px;">
+             <h4>Submit Project</h4>
+                <div class="form-row">
+                    <div class="form-group col ">
+                      <label for="projectName">Project Name</label><input type="text" 
+                      class="form-control" placeholder="Enter Project name">
+                    </div></div>
+
+                    <div class="form-group col"> 
+                    <div style="height: 50px;">
+                        <label for="projectAbstract">Project Abstract</label><input type="text" 
+                        class="form-control">
+                      </div>
+                      <div class="form-group col">
+                        <label for="authors">Authors</label><input type="text" 
+                        class="form-control" placeholder="Enter Authors name(seperated by comma)">
+                      </div>
+                      <div class="form-group col">
+                        <label for="tags">Tag(s)</label><input type="text" 
+                        class="form-control" placeholder="Use # to tag project with different topics(e.g #javascript)">
+                      </div>
+                      <div class="d-flex flex-row-reverse">
+                    <button type="button" class="btn btn-primary">Login</button>
+                    </div>
+                </div>
+          </div>
+        </form> <footer class= "float-right">
+          <span>Project explorer &copy;2021.Edconnet</span>
+         
+       </footer>
+
+        </body>
 </html> 
