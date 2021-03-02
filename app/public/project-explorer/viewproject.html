@@ -1,39 +1,90 @@
 <html>
-    <header>
-        <Link rel = "stylesheet"  href='css/bootstrap.min.css'>
-        <h1>Project explorer</h1>
-        <h2>Onestop database for project explorer</h2>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="search.html">Projects</a>
-        <a href="login.html">Login</a>
-        <a href="register.html">Register</a>
-    </nav>
-    <main>
-        <section>
+    <Link rel = "stylesheet"  href='css/bootstrap.min.css'>
+    
+        <body>
         <header>
-            <h3>Project 1</h3>
+    <nav class="navbar navbar-expand navbar-dark bg-primary" > 
+      <a class="navbar-brand" href="project.html">Project explorer</a>
+            <form class="form-inline">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search projects" aria-label="Search">
+              <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+            
+        <div class="navbar-nav mr-auto">
+          <a class="nav-link" href="submit.html">submit</a>
+      </div>
+      <div class="navbar-nav" >
+        <a class="nav-link" href="signup.html">SignUp</a>
+        <a class="nav-link" href="login.html">Login</a>
+        </div>
+      </div>
+    </nav>
         </header>
-        <a href="editproject.html">Edit Project</a><br><br>
-        <ul>
-        <li>Created by:Jane Doe</li>
-        <li>Date created by: 00/00/0000</li>
-        <li>Last updated:01/01/0001</li>
-        </ul>
-        </section><br><br>
-        <section>
-            <header>
-            <h3>Project Abstract</h3>
-            </header>
-            <div>This project is for student in week two, each stage contain exercise that will test studenyt ability
-                and learning process. </div>
-        </section>
-        <section>
-            <header>
-                <h3>Project details</h3>
-            </header>
-            <li>Authors: John Doe, Jane Doe </li>
-            <li>Tags: #Asphyxia, #GSW</li>
-            <li>Project File:<a href= "Index.html">File1</a>,<a href= "Login.html">File2</a></li>
-        </section>
+      
+        <form>
+            <div class="mx-auto w-75 p-3">
+            <div class="container-fluid">
+                <h3>Project 1</h3>
+                <div class="form-row">
+                  <div class="form-group col">
+                    <input type="text" class="form-control" placeholder="Created by Ade Chris">
+                  </div>
+                  <div class="form-group col">
+                  <input type="text" class="form-control" placeholder="Created 01/03/2021">
+                 </div>
+                 <div class="form-group col">
+                    <input type="text" class="form-control" placeholder="Last updated">
+                   </div> 
+                   <button type="button" class="btn btn-primary">View Project</button>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col">
+                  <h5>Edit Project</h5>  
+                  <label for="projectAbstract">Project Abstract</label><input type="text" 
+                  class="form-control" placeholder="All about the project">
+                </div>
+
+                <div class="form-group col">
+                  <h5>Project Details</h4>
+               <input type="text" class="form-control" placeholder="Authors">
+                  </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="comment">Comment</label><input type="text" 
+                    class="form-control" placeholder="Leave a comment">
+                  </div>
+                  <div class="form-group col">
+                  <label for="adeCivis">Ade civis</label><input type="text" 
+                  class="form-control" placeholder="#web">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col">
+            <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            <div class="form-group col">
+            <div class="card">
+                <h5 class="card-header">Project File</h5>
+                <div class="card-body">
+                  <p class="card-text">No upload yet</p>
+                  </div>
+            </div>
+        </div>
+         </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <input type="text" 
+                            class="form-control" placeholder="No comment added">
+                          </div> 
+                        </div>
+
+                          <footer class= "float-right">
+                            <span>Project explorer &copy;2021.Edconnet</span>
+                           
+                         </footer>
+                
+
+</html> 
