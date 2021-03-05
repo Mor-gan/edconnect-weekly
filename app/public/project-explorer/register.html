@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,78 +9,103 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
-    
-    <body>
-    <header>
-<nav class="navbar navbar-expand navbar-dark bg-primary" > 
-  <a class="navbar-brand" href="index.html">Project explorer</a>
-        <form class="form-inline" name="searchForm">
-          <input class="form-control mr-sm-2" type="search" value="Search Projects" 
-           placeholder="Search Projects"  aria-label="Search">
-          <button class="btn btn-outline-light" type="submit">Search</button>
-          <div class="navbar-nav mr-auto">
-        <input class=" navbar-brand form-control" type="submit" value="submit">
-          </div>
-  <div class="navbar-nav" >
-    <a class="nav-link" href="register.html">SignUp</a>
-    <a class="nav-link" href="login.html">Login</a>
-    
-  </div>
-</form>
-
-</nav>
-    </header>
-
-           <form>
-            <div class="mx-auto w-75">
-             <h3>Sign Up</h3>
-                <div class="form-row">
-                  <div class="form-group col">
-                    <label for="firstName">First Name</label><input type="text" class="form-control"
-                    name="firstName" placeholder="First name">
-                  </div>
-                  <div class="form-group col">
-                    <label for="lastName">Last Name</label>  <input type="text" class="form-control" 
-                    name="lastName" placeholder="Last name"></div>
-                 </div>
-                  
-            
-                   <div class="form-row">
-                     <div class="col">
-                    <label for="email">Email Address</label><input type="email" class="form-control"
-                    name="email" placeholder="Your Email Address">
-                     </div>
-                     <div class="col">
-                       <label for="yourPassword">Password</label> <input type="password"
-                        class="form-control" name="password"  placeholder="Your Password">
-                     </div>
-                   </div>
-                 
-                      
-                   <div class="form-row">
-                        <div class="form-group col-6">
-                          <label for="program">Program</label>
-                          <select id="program" class="form-control" name="program"> 
-                            <option selected>Choose...</option>
-                          </select>
+<body>
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary align-items-center">
+        <a class="navbar-brand" href="index.html">Project Explorer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <form class="form-inline my-2 my-lg-0" name="searchForm">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search Projects">
+            <button class="btn btn-outline-light" type="submit">Search</button>
+        </form><br>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <a class="nav-link" style="color: beige;" href="createproject.html">Submit</a>
+        </div>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" style="color: beige;" href="register.html">Sign Up</a>
+            </li>
+            <li>
+                <a class="nav-link" style="color: beige;" href="login.html">Login</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="p-2 order-3">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="mx-auto w-75 p-3">
+                <h3>Signup</h3>
+                <form>
+                    <div class="form-group form-row">
+                        <div class="col">
+                            <label for="form-label">First Name</label>
+                            <input type="text" name="firstName" class="form-control" placeholder="First Name">
                         </div>
-                        <div class="form-group col">
-                          <label for="matricNumber">Matriculation Number</label> <input type="text" class="form-control" 
-                          name="matricNumber" placeholder="e.g 06/2021">
+                        <div class="col">
+                            <label for="form-label">Last Name</label>
+                            <input type="text" name="lastName" class="form-control" placeholder="Last Name">
                         </div>
-                   
-                        <div class="form-group col">
-                          <label for="graduationYear">Graduation Year</label> <select id="graduationYear"
-                           class="form-control" name="graduationYear">
-                            <option selected>Choose...</option></div>
-                   </div>
-                   <input class="btn btn-primary" type="submit" value="Sign Up">
-                      </div>
+                    </div>
+                    <div class="form-group form-row">
+                        <div class="col">
+                            <label for="form-label">Email Address</label>
+                            <input type="email" name="email" class="form-control" placeholder="Your Email Address">
+                        </div>
+                        <div class="col">
+                            <label for="form-label">Password</label>
+                            <input type="password" name="password" class="form-control" placeholder="Your Password">
+                        </div>
+                    </div>
+                    <div class="form-group form-row">
+                        <div class="col">
+                            <label for="form-label">Program</label>
+                                <select name="program" id="program" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option value="computer_science">Computer Science</option>
+                                    <option value="computer_information_systems">Computer Information Systems</option>
+                                    <option value="computer_technology">Computer Technology</option>
+                                </select>
+                        </div>
+                        <div class="col">
+                            <div class="form-row">
+                                <div class="col">
+                                    <label for="form-label">Matriculation Number</label>
+                                    <input type="text" name="matricNumber" class="form-control" placeholder="eg. 13/25pc115">
+                                </div>
+                                <div class="col">
+                                    <label for="form-label">Graduation Year</label>
+                                    <select name="graduationYear" class="form-control" id="graduationyear">
+                                        <option selected>Choose...</option>
+                                        <option value="2013">2013</option>
+                                        <option value="2014">2014</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2020">2020</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </form>
-              
-                 <footer class="float-right">
-                  <span>Project explorer &copy;2021.Edconnet</span>
-                  </footer>            
-  
-    </body>
+                <button class="btn btn-primary" type="submit">Sign up</button>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="text-muted">
+    <div class="container">
+        <p class="float-right">
+            Project Explorer © 2020 -
+            <a class="link" style="color: black;" href="#">Edconnect</a>
+        </p>
+    </div>
+</footer>
+</body>
 </html>
+© 2021 GitHub, Inc.
