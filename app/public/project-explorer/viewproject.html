@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,91 +9,75 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
-    
-        <body>
-        <header>
-    <nav class="navbar navbar-expand navbar-dark bg-primary" > 
-      <a class="navbar-brand" href="project.html">Project explorer</a>
-            <form class="form-inline">
-              <input class="form-control mr-sm-2" type="text" value="Serch Projects"  placeholder="Search Projects"
-               aria-label="Search">
-              <button class="btn btn-outline-light" type="submit">Search</button>
-            </form>
-            
-        <div class="navbar-nav mr-auto">
-          <a class="nav-link" href="#">submit</a>
-      </div>
-      <div class="navbar-nav" >
-        <a class="nav-link" href="#">SignUp</a>
-        <a class="nav-link" href="#">Login</a>
+<body>
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary align-items-center">
+        <a class="navbar-brand" href="index.html">Project Explorer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <form class="form-inline my-2 my-lg-0" name="searchForm">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search Projects">
+            <button class="btn btn-outline-light" type="submit">Search</button>
+        </form><br>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <a class="nav-link" style="color: beige;" href="createproject.html">Submit</a>
         </div>
-      </div>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" style="color: beige;" href="register.html">Sign Up</a>
+            </li>
+            <li>
+                <a class="nav-link" style="color: beige;" href="login.html">Login</a>
+            </li>
+        </ul>
     </nav>
-        </header>
-      
-        <form>
-            <div class="mx-auto w-75 p-3">
-            <div class="container-fluid">
-              
-                  <div class="form-group col">
-                    <input type="text" class="form-control" placeholder="Created by Ade Chris">
-                  </div>
-                  <div class="form-group col">
-                  <input type="text" class="form-control" placeholder="Created 01/03/2021">
-                 </div>
-                 <div class="form-group col">
-                    <input type="text" class="form-control" placeholder="Last updated">
-                   </div> 
-                   <button type="button" class="btn btn-primary">View Project</button>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group col">
-                  <h5>Edit Project</h5>  
-                  <label for="projectAbstract">Project Abstract</label><input type="text" 
-                  class="form-control" placeholder="All about the project">
-                </div>
-
-                <div class="form-group col">
-                  <h5>Project Details</h4>
-               <input type="text" class="form-control" placeholder="Authors">
-                  </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col">
-                    <label for="comment">Comment</label><input type="text" 
-                    class="form-control" placeholder="Leave a comment">
-                  </div>
-                  <div class="form-group col">
-                  <label for="adeCivis">Ade civis</label><input type="text" 
-                  class="form-control" placeholder="#web">
+</header>
+<main class="p-2 order-3">
+    <div class="container">
+        <section>
+            <h3>Project 1</h3>
+            <div class="row mx-auto p-3">
+                <div class="col"><p>Created By<br>Johnbosco Onejeme</p></div>
+                <div class="col"><p>Date Created<br>28-02-2019</p></div>
+                <div class="col"><p>Last Updated<br>29-02-2020</p></div>
+                <div class=" col d-flex justify-content-end align-items-center">
+                    <a class="btn btn-primary" href="editproject.html" type="submit">Edit Project</a>
                 </div>
             </div>
-
-            <div class="form-row">
-                <div class="form-group col">
-            <button type="button" class="btn btn-primary">Submit</button>
+        </section>
+        <section>
+            <form class="form-group form-row">
+                <div class="col">
+                    <h5>Project Abstract</h5><br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue quisque egestas diam in arcu cursus. Vel pretium lectus quam id leo in vitae turpis. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Enim blandit volutpat maecenas volutpat blandit aliquam etiam erat. Nibh ipsum consequat nisl vel pretium lectus. Porta nibh venenatis cras sed felis eget velit.</p>
+                    <label class="form-label" for="comments">Comments</label>
+                    <textarea class="form-control mb-3" name="abstract"rows="3" cols="10" placeholder="Leave a comment"></textarea>
                 </div>
-            <div class="form-group col">
-            <div class="card">
-                <h5 class="card-header">Project File</h5>
-                <div class="card-body">
-                  <p class="card-text">No upload yet</p>
-                  </div>
-            </div>
-        </div>
-         </div>
-                    <div class="form-row">
-                        <div class="form-group col">
-                            <input type="text" 
-                            class="form-control" placeholder="No comment added">
-                          </div> 
-                        </div>
-
-                          <footer class= "float-right">
-                            <span>Project explorer &copy;2021.Edconnet</span>
-                           
-                         </footer>
-                
-
-</html> 
+                <div class="col">
+                    <h5>Project Details</h5><br>
+                    <div class="card">
+                    <div class="card-header">Author(s)</div>
+                    <div class="card-body">Johnbosco Onejeme</div>
+                    <div class="card-footer">#creative</div>
+                    </div><br>
+                    <div class="card">
+                    <div class="card-header">Project Files</div>
+                    <div class="card-body">No file uploaded</div>
+                    </div>
+                </div>
+            </form>
+            <input class="btn btn-primary col-2" type="submit" value="Save">
+        </section>
+    </div>
+</main>
+<footer class="text-muted">
+    <div class="container">
+        <p class="float-right">
+            Project Explorer © 2020 -
+            <a class="link" style="color: black;" href="#">Edconnect</a>
+        </p>
+    </div>
+</footer>
+</body>
+</html>
