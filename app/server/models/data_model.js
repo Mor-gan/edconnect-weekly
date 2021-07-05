@@ -1,37 +1,53 @@
 class DataModel {
-    constructor() {
-        this.data = [];
-        this.errors = [];
+  constructor() {
+    this.data = [];
+    this.errors = [];
+  }
+
+  getAll() {
+    return this.data;
+  }
+
+  getById(id) {
+    this.data.map((obj)=> obj.id)
+    if (obj.id===id) {
+      return true;
+    } else {
+      return null;
     }
+  }
 
-    getAll() {
-        return this.data;
+  save(obj) {
+    if (this.validate(obj)) {
+      this.data.push(obj);
+      return true;
     }
+    return false;
+  }
 
-    getById(id) {
-
+  update(obj, id) {
+    this.data.map((obj)=> obj.id );
+    if (obj.id===id) {
+      return true;
+    } else {
+      return false;
     }
+  }
 
-    save(obj) {
-        if (this.validate(obj)) {
-            this.data.push(obj);
-            return true;
-        }
-        return false;
-    }
-
-    update(obj, id) {
-
-    }
-
-    delete(id) {
-
-    }
-
-    // this method will be overriden in the sub classes
-    validate(obj) {
-        return false;
-    }
+  delete(id) {
+   this.data.map((obj)=> obj.id );
+  if( obj.splice(id)===id){
+      return true
+  }
+  else{
+return false
+  }
+  }
+  
+  // this method will be overriden in the sub classes
+  validate(obj) {
+    return false;
+  }
 }
 
 // Do not worry about the below for now; It is included so that we can test your code
