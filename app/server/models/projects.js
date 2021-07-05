@@ -14,10 +14,10 @@ this.createdBy=createdBy;
 class Projects extends DataModel {
     validate(obj) {
         this.errors = [];
-        if (!obj.authors===[]){
+        if (!obj.authors===this.authors){
             this.errors.push(`Authors should be an array`);
     }
-    if (!obj.tags===[]){
+    if (!obj.tags===this.tags){
         this.errors.push(`Tags should be an array`);
 }
 
@@ -28,8 +28,7 @@ for (const property in obj) {
 }
 }
 }
-// Do not worry about the below for now; It is included so that we can test your code
-// We will cover module exports in later parts of this course
+
 module.exports = {
     Project,
     Projects
