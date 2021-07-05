@@ -26,6 +26,7 @@ for (const property in obj) {
         this.errors.push(`${property} should not be empty`)
     }
 }
+return (this.errors.length > 0) ? false : true;
 }
 }
 
