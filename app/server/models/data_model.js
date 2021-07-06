@@ -26,24 +26,24 @@ class DataModel {
   }
 
   update(obj, id) {
-    this.data.map((obj)=> obj.id );
-    if (obj.id===id) {
+    this.data.map((obj)=> {
+    if (obj.id===id){ 
       return true;
-    } else {
-      return false;
-    }
-  }
+    } 
+      return false;   
+  })
+
+}
 
   delete(id) {
-   this.data.map((obj)=> obj.id );
+   this.data.map((obj)=> {
   if( obj.splice(id)===id){
       return true
   }
-  else{
 return false
-  }
-  }
   
+  })
+}
   // this method will be overriden in the sub classes
   validate(obj) {
     return false;
