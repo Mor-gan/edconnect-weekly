@@ -9,13 +9,14 @@ class DataModel {
   }
 
   getById(id) {
-    this.data.map((obj)=> obj.id)
+    for (let obj of this.data) {
     if (obj.id===id) {
-      return true;
-    } else {
+      return obj;
+    } 
+  }
       return null;
     }
-  }
+  
 
   save(obj) {
     if (this.validate(obj)) {
@@ -26,24 +27,30 @@ class DataModel {
   }
 
   update(obj, id) {
-    this.data.map((obj)=> {
-    if (obj.id===id){ 
-      return true;
-    } 
-      return false;   
-  })
+  let updateUsers = this.data.find(obj => obj.id===id) 
+ if(!updateUsers){
+        return false
+    }
+  
+    for(let key in obj){
+        updateUsers[key] = obj[key]
 
+    }
+    return true;
 }
+
+  
 
   delete(id) {
-   this.data.map((obj)=> {
-  if( obj.splice(id)===id){
-      return true
-  }
-return false
-  
-  })
+    let index = this.data.findIndex(item => item.id === id);
+    if (index>=0) {
+        this.data.splice(index, 1);
+        return true;
+    }
+    return false;
+
 }
+
   // this method will be overriden in the sub classes
   validate(obj) {
     return false;

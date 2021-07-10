@@ -12,24 +12,37 @@ this.createdBy=createdBy;
 }
 
 class Projects extends DataModel {
+
     validate(obj) {
-        this.errors = [];
-        if (!obj.authors===this.authors){
-            this.errors.push(`Authors should be an array`);
-    }
-    if (!obj.tags===this.tags){
-        this.errors.push(`Tags should be an array`);
-}
+    this.errors = [];
+    var validationCheck = true;
+    for(let objKey in obj)
+    {
+        if(objKey == 'authors' && !Array.isArray(obj[objKey]))
+        {              
+            validationCheck = false;
+            this.errors.push("Authors should be an array");
+        }
+       
+        else if(objKey == 'tags' && !Array.isArray(obj[objKey]))
+        {
+            validationCheck = false
+            this.errors.push("Tags should be an array");
+        }
 
-for (const property in obj) {
-    if(obj[property] === ""){
-        this.errors.push(`${property} should not be empty`)
+        else 
+            if(obj[objKey] === null || obj[objKey] === '' || obj[objKey] === [])
+            {
+                this.errors.push(objKey + " should not be empty");
+                validationCheck = false;
+            
+            }
     }
-}
-return (this.errors.length > 0) ? false : true;
-}
-}
+   
+    return validationCheck;
 
+}
+}
 module.exports = {
     Project,
     Projects
